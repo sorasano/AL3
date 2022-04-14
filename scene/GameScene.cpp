@@ -34,7 +34,18 @@ void GameScene::Initialize() {
 	viewProjection_.Initialize();
 }
 
-void GameScene::Update() {}
+void GameScene::Update() { 
+
+	//書式指定付き表示
+	debugText_->SetPos(50,70);
+	debugText_->Printf("translation:(%f,%f,%f)", 10.0f, 10.0f, 10.0f);
+
+	debugText_->SetPos(50, 90);
+	debugText_->Printf("rotation:(%f,%f,%f)", XM_PI / 4.0f, XM_PI / 4.0f, 0.0f);
+	
+	debugText_->SetPos(50, 110);
+	debugText_->Printf("scale_:(%f,%f,%f)", 5.0f, 5.0f, 5.0f);
+}
 
 void GameScene::Draw() {
 
