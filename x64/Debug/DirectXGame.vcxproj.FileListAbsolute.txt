@@ -1,1 +1,2 @@
 C:\KamataEngine202204011\KamataEngine\DirectXGame\x64\Debug\DirectXGame.exe
+C:\Users\bigsk\OneDrive\デスクトップ\新しいフォルダー\DirectXGame\x64\Debug\DirectXGame.exe
