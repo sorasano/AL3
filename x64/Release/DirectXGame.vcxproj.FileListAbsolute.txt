@@ -1,1 +1,2 @@
 C:\KamataEngine\DirectXGame\x64\Release\AL3.exe
+C:\Users\bigsk\OneDrive\デスクトップ\新しいフォルダー\DirectXGame\x64\Release\DirectXGame.exe

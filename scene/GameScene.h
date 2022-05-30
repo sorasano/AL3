@@ -11,6 +11,7 @@
 #include "WorldTransform.h"
 #include <DirectXMath.h>
 #include "DebugCamera.h"
+#include "Player.h"
 
 /// <summary>
 /// ゲームシーン
@@ -55,13 +56,14 @@ class GameScene {
 	//3Dモデル
 	Model*model_ = nullptr;
 	
-	//ワールドトランスフォーム
-	WorldTransform worldTransform_;
 	//ビュープロジェクション
 	ViewProjection viewProjection_;
 
 	//デバックカメラ
 	DebugCamera* debugCamera_ = nullptr;
+
+	//自キャラ
+	Player* player_ = nullptr;
 
 	/// <summary>
 	/// ゲームシーン用
