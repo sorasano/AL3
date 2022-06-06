@@ -1,4 +1,5 @@
 #pragma once
+#include "WorldTransform.h"
 #include "WinApp.h"
 #include "Model.h"
 #include "DebugText.h"
@@ -14,7 +15,7 @@ public:
 	void Update();
 
 	//描画
-	void Draw();
+	void Draw(ViewProjection &viewProjection_);
 
 private:
 	//ワールド変換データ

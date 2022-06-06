@@ -22,6 +22,10 @@ void GameScene::Initialize() {
 	debugText_ = DebugText::GetInstance();
 	model_ = Model::Create();
 
+
+	//ファイル名を指定してテクスチャを読み込む
+	textureHandle_ = TextureManager::Load("mario.jpg");
+
 	//自キャラの生成
 	player_ = new Player();
 	//自キャラの初期化
@@ -71,16 +75,12 @@ void GameScene::Draw() {
 	// 3Dオブジェクト描画前処理
 	Model::PreDraw(commandList);
 
-	//ファイル名を指定してテクスチャを読み込む
-	textureHandle_ = TextureManager::Load("mario.jpg");
-
 	/// <summary>
 	/// ここに3Dオブジェクトの描画処理を追加できる
 	/// </summary>
 
-
 	//自キャラの更新
-	player_->Draw();
+	player_->Draw(viewProjection_);
 
 	////3Dモデル描画
 	//model_->Draw(worldTransform_, debugCamera_->GetViewProjection(), textureHandle_);
@@ -99,6 +99,9 @@ void GameScene::Draw() {
 
 	// デバッグテキストの描画
 	debugText_->DrawAll(commandList);
+	//debugText_->SetPos(0, 20);
+	//debugText_->Printf("eye(%f,%f,%f)", viewProjection_.eye.x, viewProjection_.eye.y, viewProjection_.eye.z);
+
 	//
 	// スプライト描画後処理
 	Sprite::PostDraw();
